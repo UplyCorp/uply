@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uply - Site Vitrine pour Petites Entreprises</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#hero" class="logo">
+        <img src="assets/logo.png" alt="Uply logo">
+      </a>
+      <ul class="menu center-menu">
+        <li><a href="#offres">Offres</a></li>
+        <li><a href="#extras">Extras</a></li>
+        <li><a href="#fonctionnement">Fonctionnement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Votre Site Vitrine Professionnel<br>pour Booster Votre Visibilité Locale</h1>
+      <p>Création clé en main à 150 € + hébergement sécurisé dès 9,90 €/mois</p>
+      <a href="#offres" class="btn-primary">Découvrir nos offres</a>
+    </div>
+  </section>
+
+  <!-- Offres Section -->
+  <section id="offres">
+    <div class="container">
+      <h2>Nos Formules</h2>
+      <div class="cards">
+        <!-- Création -->
+        <div class="card">
+          <h3>Création</h3>
+          <p class="price">150 € (forfait unique)</p>
+          <p class="description">Site vitrine jusqu’à 5 pages, design personnalisé et responsive.</p>
+          <a href="#contact" class="btn-secondary">Choisir</a>
+        </div>
+        <!-- Starter -->
+        <div class="card">
+          <h3>Starter</h3>
+          <p class="price">9,90 €/mois</p>
+          <p class="description">Hébergement, nom de domaine et maintenance basique.</p>
+          <a href="#contact" class="btn-secondary">Choisir</a>
+        </div>
+        <!-- Marketing -->
+        <div class="card">
+          <h3>Marketing</h3>
+          <p class="price">49 €/mois</p>
+          <p class="description">SEO de base, fiche Google My Business et rapport de trafic.</p>
+          <a href="#contact" class="btn-secondary">Choisir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras Section with Slider -->
+  <section id="extras">
+    <div class="container">
+      <h2>Options &amp; Extras</h2>
+      <div class="slider" id="extras-slider">
+        <!-- Précédent -->
+        <button class="arrow prev" id="prevBtn">&#10094;</button>
+
+        <!-- Slides Container -->
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <img src="assets/nfc_google.png" alt="Plaque NFC dynamique">
+            <div class="slide-content">
+              <span class="badge">Nouveau</span>
+              <h3>Plaque NFC &amp; QR Code dynamique</h3>
+              <p class="price">12 € / unité</p>
+              <p class="description">Permet à vos clients d’accéder à votre site en un scan ou tap NFC.</p>
+              <div class="reviews">
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Marie D.</strong>: Super pratique !
+                </div>
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Antoine L.</strong>: Installation rapide.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="assets/chatbot.png" alt="Intégration Chatbot">
+            <div class="slide-content">
+              <span class="badge">Populaire</span>
+              <h3>Intégration Chatbot</h3>
+              <p class="price">100 € (forfait unique)</p>
+              <p class="description">Assistant virtuel pour répondre automatiquement aux visiteurs.</p>
+              <div class="reviews">
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Pierre M.</strong>: Très réactif.
+                </div>
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Chloé S.</strong>: Boosté nos contacts.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="assets/reservation_analytics.png" alt="Module de réservation">
+            <div class="slide-content">
+              <span class="badge">Exclusif</span>
+              <h3>Module de réservation en ligne</h3>
+              <p class="price">80 € (forfait unique)</p>
+              <p class="description">Vos clients prennent RDV 24/7 directement sur le site.</p>
+              <div class="reviews">
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Sarah T.</strong>: Gain de temps énorme.
+                </div>
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Julien P.</strong>: Interface claire.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="slide">
+            <img src="assets/analytics_console.png" alt="Google Analytics & Search Console">
+            <div class="slide-content">
+              <span class="badge">Essentiel</span>
+              <h3>Google Analytics &amp; Search Console</h3>
+              <p class="price">50 € (forfait unique)</p>
+              <p class="description">Suivi détaillé de trafic et performance sur Google.</p>
+              <div class="reviews">
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Camille F.</strong>: Infos précises.
+                </div>
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Thomas G.</strong>: Tableau de bord utile.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="slide">
+            <img src="assets/social.png" alt="Gestion Réseaux Sociaux">
+            <div class="slide-content">
+              <span class="badge">Top</span>
+              <h3>Gestion Réseaux Sociaux</h3>
+              <p class="description">Création et gestion de vos comptes, notamment Instagram.</p>
+              <div class="reviews">
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Alain C.</strong>: Publications régulières.
+                </div>
+                <div class="review">
+                  <span class="stars">★★★★★</span>
+                  <span class="verified">Vérifié</span>
+                  <span class="bubble">💬</span>
+                  <strong>Déborah K.</strong>: Engagement en hausse.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suivant -->
+        <button class="arrow next" id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Testimonials -->
+  <section id="avis-global">
+    <div class="container">
+      <h2>Avis clients</h2>
+      <div class="global-reviews">
+        <img src="assets/google_logo.png" alt="Google logo" class="google-logo">
+        <span class="google-rating">4,8 ★ (316 avis)</span>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>“Uply a boosté ma visibilité locale en quelques jours !”</p>
+          <strong>Chloé R.</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“Service rapide et très professionnel.”</p>
+          <strong>Jérôme B.</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“Un excellent rapport qualité-prix.”</p>
+          <strong>Amélie T.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnement Section -->
+  <section id="fonctionnement">
+    <div class="container">
+      <h2>Comment ça marche</h2>
+      <ol>
+        <li>Brief rapide via formulaire (logo, contenus, besoins)</li>
+        <li>Livraison du site sous 48 h</li>
+        <li>1 cycle de retours inclus</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container contact-container">
+      <h2>Contactez-nous</h2>
+      <p>Vous pouvez nous contacter en un clic via le bouton ci-dessous :</p>
+      <a href="mailto:uplycorp@gmail.com" class="btn-primary">Envoyer un mail</a>
+      <p class="manual-contact">
+        Ou manuellement à l’adresse
+        <a href="mailto:uplycorp@gmail.com">uplycorp@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Uply. Tous droits réservés.</p>
+    <p>Contact : <a href="mailto:uplycorp@gmail.com">uplycorp@gmail.com</a></p>
+  </footer>
+
+  <!-- Slider Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var slider          = document.getElementById('extras-slider');
+      var slidesContainer = slider.querySelector('.slides');
+      var slides          = slidesContainer.children;
+      var prevBtn         = document.getElementById('prevBtn');
+      var nextBtn         = document.getElementById('nextBtn');
+      var currentIndex    = 0;
+      var autoInterval;
+
+      function showSlide(i) {
+        currentIndex = (i + slides.length) % slides.length;
+        slidesContainer.style.transform = 'translateX(' + (-100 * currentIndex) + '%)';
+      }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSlide(currentIndex - 1);
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSlide(currentIndex + 1);
+      });
+
+      slider.addEventListener('mouseenter', function() {
+        clearInterval(autoInterval);
+      });
+      slider.addEventListener('mouseleave', function() {
+        autoInterval = setInterval(function() {
+          showSlide(currentIndex + 1);
+        }, 3000);
+      });
+
+      // Initialisation
+      showSlide(0);
+      autoInterval = setInterval(function() {
+        showSlide(currentIndex + 1);
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
