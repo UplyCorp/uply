@@ -15,7 +15,8 @@
       <a href="#hero" class="logo">
         <img src="assets/logo.png" alt="Uply logo">
       </a>
-      <ul class="menu center-menu">
+      <button class="hamburger" aria-label="Ouvrir le menu">☰</button>
+      <ul class="menu">
         <li><a href="#offres">Offres</a></li>
         <li><a href="#extras">Extras</a></li>
         <li><a href="#fonctionnement">Fonctionnement</a></li>
@@ -38,21 +39,18 @@
     <div class="container">
       <h2>Nos Formules</h2>
       <div class="cards">
-        <!-- Création -->
         <div class="card">
           <h3>Création</h3>
           <p class="price">150 € (forfait unique)</p>
           <p class="description">Site vitrine jusqu’à 5 pages, design personnalisé et responsive.</p>
           <a href="#contact" class="btn-secondary">Choisir</a>
         </div>
-        <!-- Starter -->
         <div class="card">
           <h3>Starter</h3>
           <p class="price">9,90 €/mois</p>
           <p class="description">Hébergement, nom de domaine et maintenance basique.</p>
           <a href="#contact" class="btn-secondary">Choisir</a>
         </div>
-        <!-- Marketing -->
         <div class="card">
           <h3>Marketing</h3>
           <p class="price">49 €/mois</p>
@@ -68,10 +66,7 @@
     <div class="container">
       <h2>Options &amp; Extras</h2>
       <div class="slider" id="extras-slider">
-        <!-- Précédent -->
         <button class="arrow prev" id="prevBtn">&#10094;</button>
-
-        <!-- Slides Container -->
         <div class="slides">
           <!-- Slide 1 -->
           <div class="slide">
@@ -193,8 +188,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Suivant -->
         <button class="arrow next" id="nextBtn">&#10095;</button>
       </div>
     </div>
@@ -244,7 +237,7 @@
       <p>Vous pouvez nous contacter en un clic via le bouton ci-dessous :</p>
       <a href="mailto:uplycorp@gmail.com" class="btn-primary">Envoyer un mail</a>
       <p class="manual-contact">
-        Ou manuellement à l’adresse
+        Ou manuellement à l’adresse  
         <a href="mailto:uplycorp@gmail.com">uplycorp@gmail.com</a>
       </p>
     </div>
@@ -256,9 +249,17 @@
     <p>Contact : <a href="mailto:uplycorp@gmail.com">uplycorp@gmail.com</a></p>
   </footer>
 
-  <!-- Slider Script -->
+  <!-- Slider & Hamburger Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Hamburger menu
+      var burger = document.querySelector('.hamburger');
+      var menu   = document.querySelector('ul.menu');
+      burger.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+
+      // Slider logic
       var slider          = document.getElementById('extras-slider');
       var slidesContainer = slider.querySelector('.slides');
       var slides          = slidesContainer.children;
@@ -276,7 +277,6 @@
         e.preventDefault();
         showSlide(currentIndex - 1);
       });
-
       nextBtn.addEventListener('click', function(e) {
         e.preventDefault();
         showSlide(currentIndex + 1);
@@ -288,14 +288,14 @@
       slider.addEventListener('mouseleave', function() {
         autoInterval = setInterval(function() {
           showSlide(currentIndex + 1);
-        }, 3000);
+        }, 5000);
       });
 
-      // Initialisation
+      // Init
       showSlide(0);
       autoInterval = setInterval(function() {
         showSlide(currentIndex + 1);
-      }, 3000);
+      }, 5000);
     });
   </script>
 

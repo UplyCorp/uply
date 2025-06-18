@@ -1,6 +1,6 @@
-/* ==================================================
+/* --------------------------------------------------
    Reset & Base
-   ================================================== */
+-------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -28,15 +28,15 @@ img {
   padding: 2rem 0;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Header & Navigation
-   ================================================== */
+-------------------------------------------------- */
 header {
   background: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 nav {
   position: relative;
@@ -52,30 +52,41 @@ nav .logo {
 nav .logo img {
   height: 60px;
 }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
 ul.menu {
   list-style: none;
   display: flex;
   gap: 1rem;
 }
+ul.menu.active {
+  display: flex;
+}
 ul.menu li a {
-  display: inline-block;
   background: #fff;
   border: 2px solid #bfa06c;
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 ul.menu li a:hover {
   background: #bfa06c;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* ==================================================
-   Hero Section
-   ================================================== */
+/* --------------------------------------------------
+   Hero
+-------------------------------------------------- */
 #hero {
   text-align: center;
   padding: 6rem 0;
@@ -89,39 +100,27 @@ ul.menu li a:hover {
   margin-bottom: 2rem;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Buttons
-   ================================================== */
-/* Primary button */
+-------------------------------------------------- */
 .btn-primary {
   display: inline-block;
-  background: linear-gradient(135deg, #d4af37, #bfa06c);
+  background: linear-gradient(135deg,#d4af37,#bfa06c);
   color: #fff;
   font-size: 1.125rem;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
-.btn-primary:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.btn-primary:focus {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
-
-/* Secondary button */
 .btn-secondary {
   display: inline-block;
   background: #1a1a1a;
@@ -136,22 +135,22 @@ ul.menu li a:hover {
   background: #333;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Cards (Offres)
-   ================================================== */
+-------------------------------------------------- */
 .cards {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
 }
 .card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 2.5rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .card h3 {
   font-size: 1.75rem;
@@ -168,9 +167,9 @@ ul.menu li a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Badge
-   ================================================== */
+-------------------------------------------------- */
 .badge {
   display: inline-block;
   background: #bfa06c;
@@ -182,9 +181,9 @@ ul.menu li a:hover {
   margin-bottom: 1rem;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Slider & Extras
-   ================================================== */
+-------------------------------------------------- */
 #extras h2 {
   text-align: center;
   font-size: 2.25rem;
@@ -205,7 +204,7 @@ ul.menu li a:hover {
   background: #fff;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 .slide img {
   flex: 0 0 200px;
@@ -229,9 +228,9 @@ ul.menu li a:hover {
   margin-bottom: 1rem;
 }
 
-/* ==================================================
-   Arrows (Prev & Next)
-   ================================================== */
+/* --------------------------------------------------
+   Arrows
+-------------------------------------------------- */
 .arrow {
   position: absolute;
   top: 50%;
@@ -241,13 +240,13 @@ ul.menu li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.85);
   border: 2px solid #bfa06c;
   border-radius: 50%;
   color: #bfa06c;
   font-size: 1.25rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   transition: background 0.3s, box-shadow 0.3s, color 0.3s;
   z-index: 2;
 }
@@ -260,16 +259,12 @@ ul.menu li a:hover {
 .arrow:hover {
   background: #bfa06c;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.arrow:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(191, 160, 108, 0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Reviews
-   ================================================== */
+-------------------------------------------------- */
 .reviews {
   margin-top: 1rem;
 }
@@ -296,9 +291,9 @@ ul.menu li a:hover {
   margin: 0 0.5rem;
 }
 
-/* ==================================================
-   Testimonials (Global)
-   ================================================== */
+/* --------------------------------------------------
+   Testimonials
+-------------------------------------------------- */
 #avis-global h2 {
   text-align: center;
   font-size: 2.25rem;
@@ -321,8 +316,8 @@ ul.menu li a:hover {
 }
 .testimonials {
   display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 .testimonial-card {
   background: #f8f8f8;
@@ -353,9 +348,9 @@ ul.menu li a:hover {
   font-weight: 600;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Fonctionnement
-   ================================================== */
+-------------------------------------------------- */
 #fonctionnement h2 {
   text-align: center;
   font-size: 2.25rem;
@@ -373,9 +368,9 @@ ul.menu li a:hover {
   font-weight: 500;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Contact Section
-   ================================================== */
+-------------------------------------------------- */
 .contact-container {
   text-align: center;
 }
@@ -384,16 +379,15 @@ ul.menu li a:hover {
 }
 .manual-contact {
   margin-top: 0.5rem;
-  font-weight: normal;
 }
 .manual-contact a {
   color: #bfa06c;
   text-decoration: underline;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Footer
-   ================================================== */
+-------------------------------------------------- */
 footer {
   background: #1a1a1a;
   color: #f1f1f1;
@@ -405,29 +399,65 @@ footer a:hover {
   color: #bfa06c;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Section Hover
-   ================================================== */
+-------------------------------------------------- */
 section {
   background: #fff;
   transition: background-color 0.3s ease;
 }
 section:hover {
-  background-color: #e0e0e0;
+  background: #e0e0e0;
 }
 
-/* ==================================================
+/* --------------------------------------------------
    Responsive
-   ================================================== */
+-------------------------------------------------- */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 2rem;
+  /* Menu */
+  .hamburger {
+    display: block;
   }
+  ul.menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    padding: 1rem;
+  }
+  ul.menu.active {
+    display: flex;
+  }
+
+  /* Cards full width */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slider stacked */
   .slide {
     flex-direction: column;
-    align-items: center;
+    padding: 1rem;
   }
   .slide img {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+  }
+  .price {
+    font-size: 2rem;
   }
 }
