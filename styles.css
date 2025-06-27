@@ -59,15 +59,15 @@ nav .logo img {
   font-size: 1.75rem;
   cursor: pointer;
   position: absolute;
-  right: 2rem;
+  top: 1rem;
+  right: 1.5rem;
+  color: #2c2c2c;
+  z-index: 2100;
 }
 ul.menu {
   list-style: none;
   display: flex;
   gap: 1rem;
-}
-ul.menu.active {
-  display: flex;
 }
 ul.menu li a {
   background: #fff;
@@ -411,32 +411,57 @@ section:hover {
 }
 
 /* --------------------------------------------------
-   Responsive
+   Responsive & Mobile Overlay Menu
 -------------------------------------------------- */
 @media (max-width: 768px) {
-  /* Menu */
+  /* Hamburger visible */
   .hamburger {
     display: block;
   }
-  ul.menu {
+  /* Hide desktop menu */
+  nav ul.menu {
     display: none;
+  }
+  /* Fullscreen overlay menu */
+  ul.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    background: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 2000;
   }
   ul.menu.active {
+    right: 0;
     display: flex;
   }
+  ul.menu li a {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: background 0.3s, border-color 0.3s;
+    background: none;
+  }
+  ul.menu li a:hover {
+    background: #d4af37;
+    border-color: #fff;
+    color: #2c2c2c;
+  }
 
-  /* Cards full width */
+  /* Cards full width on mobile */
   .cards {
     grid-template-columns: 1fr;
   }
-
   /* Slider stacked */
   .slide {
     flex-direction: column;

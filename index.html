@@ -252,14 +252,23 @@
   <!-- Slider & Hamburger Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Hamburger menu
+      // ----- HAMBURGER MENU -----
       var burger = document.querySelector('.hamburger');
       var menu   = document.querySelector('ul.menu');
+
       burger.addEventListener('click', function() {
-        menu.classList.toggle('active');
+        var isActive = menu.classList.toggle('active');
+        burger.textContent = isActive ? '✕' : '☰';
       });
 
-      // Slider logic
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.remove('active');
+          burger.textContent = '☰';
+        });
+      });
+
+      // ----- SLIDER “EXTRAS” -----
       var slider          = document.getElementById('extras-slider');
       var slidesContainer = slider.querySelector('.slides');
       var slides          = slidesContainer.children;
@@ -291,13 +300,12 @@
         }, 5000);
       });
 
-      // Init
+      // Initialisation du slider
       showSlide(0);
       autoInterval = setInterval(function() {
         showSlide(currentIndex + 1);
       }, 5000);
     });
   </script>
-
 </body>
 </html>
